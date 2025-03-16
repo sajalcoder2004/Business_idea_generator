@@ -1,0 +1,668 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #0a192f, #1f4068);
+    padding: 12px 0;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    color: #00d9ff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+    color: #00ffff;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00d9ff;
+    transform: translateY(-3px);
+}
+
+/* Responsive Navbar */
+.navbar-toggler {
+    border: none;
+    background: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("https://img.icons8.com/ios-filled/50/ffffff/menu.png");
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+        background: #1f4068;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+
+/* Hero Section Styling */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(90deg, #0a192f, #1f4068);
+    color: white;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Title & Subtitle Styling */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.9;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Call-to-Action Button */
+.hero-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #00d9ff, #00ffff);
+    border: none;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #00ffff, #00d9ff);
+}
+
+/* AI Animation (Floating Dots & Lines) */
+.ai-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/circuit-board.png');
+    opacity: 0.2;
+    animation: moveBg 10s linear infinite;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveBg {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+
+
+/* Form Section Styling */
+.form-section {
+    padding: 60px 20px;
+    background: linear-gradient(90deg, #1f4068, #0a192f);
+    color: white;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Form Styling */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Remove Blur on Small Screens */
+@media (max-width: 768px) {
+    form {
+        background: rgba(255, 255, 255, 0.15); /* Less transparency for better readability */
+    }
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+legend {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Input & Select Styling */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: #ffffff;
+    color: black;
+    font-size: 1rem;
+}
+
+input[list] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: #ffffff;
+    color: black;
+    font-size: 1rem;
+}
+
+/* Improve Input Visibility on Mobile */
+@media (max-width: 768px) {
+    input, select {
+        background: #f8f9fa;
+        border: 1px solid #ccc;
+        color: #333;
+    }
+}
+
+@media (max-width: 768px) {
+    input[list] {
+        background: #f8f9fa;
+        border: 1px solid #ccc;
+        color: #333;
+    }
+}
+
+/* Checkbox Styling */
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.checkbox-group label {
+    margin-right: 15px;
+}
+
+
+
+
+/* Problem Generation Section */
+.generate-section {
+    padding: 60px 20px;
+    background: linear-gradient(90deg, #1f4068, #0a192f);
+    color: white;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(45deg, #00d9ff, #00ffff);
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #00ffff, #00d9ff);
+}
+
+/* Loading Animation */
+.loading-spinner {
+    margin: 20px auto;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #00d9ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* AI Output Box */
+.output-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Action Buttons */
+.button-group {
+    margin-top: 15px;
+}
+
+.btn-secondary, .btn-success {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title { font-size: 1.8rem; }
+    .section-subtitle { font-size: 1rem; }
+}
+
+
+/* Understand Problem Section */
+.understand-section {
+    padding: 60px 20px;
+    background: linear-gradient(90deg, #0a192f, #1f4068);
+    color: white;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Textarea Input */
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    color: black;
+    font-size: 1rem;
+    resize: none;
+}
+
+/* Button */
+.btn-primary {
+    background: linear-gradient(45deg, #00d9ff, #00ffff);
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #00ffff, #00d9ff);
+}
+
+/* Loading Animation */
+.loading-spinner {
+    margin: 20px auto;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #00d9ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* AI Output Box */
+.output-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Action Buttons */
+.button-group {
+    margin-top: 15px;
+}
+
+.btn-secondary, .btn-success {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title { font-size: 1.8rem; }
+    .section-subtitle { font-size: 1rem; }
+}
+
+
+/* .................................................. */
+/* AI generated solution */
+
+
+/* Solve Problem Section */
+.solve-section {
+    padding: 60px 20px;
+    background: linear-gradient(90deg, #0a192f, #1f4068);
+    color: white;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Textarea Input */
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    color: black;
+    font-size: 1rem;
+    resize: none;
+}
+
+/* Button */
+.btn-primary {
+    background: linear-gradient(45deg, #00d9ff, #00ffff);
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #00ffff, #00d9ff);
+}
+
+/* Loading Animation */
+.loading-spinner {
+    margin: 20px auto;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #00d9ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* AI Output Box */
+.output-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Action Buttons */
+.button-group {
+    margin-top: 15px;
+}
+
+.btn-secondary, .btn-success {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title { font-size: 1.8rem; }
+    .section-subtitle { font-size: 1rem; }
+}
+
+/* AI guide */
+
+
+/* Guide Section */
+.guide-section {
+    padding: 60px 20px;
+    background: linear-gradient(90deg, #0a192f, #1f4068);
+    color: white;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Textarea Input */
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    color: black;
+    font-size: 1rem;
+    resize: none;
+}
+
+/* Button */
+.btn-primary {
+    background: linear-gradient(45deg, #00d9ff, #00ffff);
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #00ffff, #00d9ff);
+}
+
+/* Loading Animation */
+.loading-spinner {
+    margin: 20px auto;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #00d9ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* AI Output Box */
+.output-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Action Buttons */
+.button-group {
+    margin-top: 15px;
+}
+
+.btn-secondary, .btn-success {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title { font-size: 1.8rem; }
+    .section-subtitle { font-size: 1rem; }
+}
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(90deg, #1f4068, #0a192f);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Font Awesome Icons */
+.social-link {
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+    color: #00d9ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-text { font-size: 0.9rem; }
+}

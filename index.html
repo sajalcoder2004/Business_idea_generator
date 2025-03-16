@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Idea Generator</title>
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">AI Startup Finder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#form">Input Form</a></li>
+                <li class="nav-item"><a class="nav-link" href="#generate">Generate Problems</a></li>
+                <li class="nav-item"><a class="nav-link" href="#understand">Understand Problem</a></li>
+                <li class="nav-item"><a class="nav-link" href="#solve">Solve Problem</a></li>
+                <li class="nav-item"><a class="nav-link" href="#guide">Guide</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Hero section  -->
+<section id="hero">
+    <div class="container text-center">
+        <h1 class="hero-title">Discover Your Next AI-Powered Business Idea</h1>
+        <p class="hero-subtitle">Turn your skills, interests, and challenges into profitable opportunities.</p>
+        <a href="#form" class="btn btn-primary hero-btn" >Get Started</a>
+    </div>
+    <div class="ai-animation"></div>
+</section>
+
+
+<section id="form" class="form-section">
+    <div class="container">
+        <h2 class="section-title">Tell Us About Yourself</h2>
+        <p class="section-subtitle">Help AI understand your background to generate the best business ideas for you.</p>
+
+        <form id="userForm">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information (Optional)</legend>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="John Doe">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="email">Email (for suggestions)</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="18" max="65" placeholder="25">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Skills & Expertise -->
+            <fieldset>
+                <legend>Skills & Expertise</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="education">Educational Background</label>
+                        <input list="education-options" id="education" name="education" placeholder="Type or select">
+                        <datalist id="education-options">
+                            <option value="High School">
+                            <option value="Bachelor's">
+                            <option value="Master's">
+                            <option value="PhD">
+                        </datalist>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <label for="experience">Work Experience (Years)</label>
+                        <input type="number" id="experience" name="experience" min="0" max="50" placeholder="5">
+                    </div>
+                </div>
+
+                <label>Technical Skills</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="coding" name="skills" value="Coding"><label for="coding">Coding</label>
+                    <input type="checkbox" id="marketing" name="skills" value="Marketing"><label for="marketing">Marketing</label>
+                    <input type="checkbox" id="sales" name="skills" value="Sales"><label for="sales">Sales</label>
+                    <input type="checkbox" id="writing" name="skills" value="Writing"><label for="writing">Writing</label>
+                </div>
+            </fieldset>
+
+            <!-- Interests & Business Preferences -->
+            <fieldset>
+                <legend>Interests & Business Preferences</legend>
+                <label for="interests">What topics interest you the most?</label>
+                <input list="interest-options" id="interests" name="interests" placeholder="Type or select">
+                <datalist id="interest-options">
+                    <option value="Technology & AI">
+                    <option value="Finance & Investment">
+                    <option value="Health & Wellness">
+                    <option value="Education & Training">
+                    <option value="Environment & Sustainability">
+                </datalist>
+                
+
+          <!-- Investment Capacity (Dropdown + Typing Allowed) -->
+<label for="investment">Investment Capacity</label>
+<input list="investment-options" id="investment" name="investment" placeholder="Type or select">
+<datalist id="investment-options">
+    <option value="No Investment">
+    <option value="$100 - $1,000">
+    <option value="$1,000 - $10,000">
+    <option value="$10,000+">
+</datalist>
+
+
+            <!-- Time Commitment & Problem Awareness -->
+            <fieldset>
+                <legend>Time Commitment & Challenges</legend>
+                <label for="time">How much time can you dedicate?</label>
+                <select id="time" name="time">
+                    <option value="fulltime">Full-Time</option>
+                    <option value="parttime">Part-Time</option>
+                    <option value="weekend">Weekend Only</option>
+                </select>
+
+                <label>What challenges are stopping you?</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="noidea" name="challenges" value="Finding Idea"><label for="noidea">Finding a business idea</label>
+                    <input type="checkbox" id="skills" name="challenges" value="Lack of Skills"><label for="skills">Lack of skills</label>
+                    <input type="checkbox" id="money" name="challenges" value="Financial Limitations"><label for="money">Financial limitations</label>
+                </div>
+            </fieldset>
+
+        
+        </form>
+    </div>
+</section>
+
+<!-- Problem GEneration section -->
+<section id="generate" class="generate-section">
+    <div class="container">
+        <h2 class="section-title">Generate a Business Problem</h2>
+        <p class="section-subtitle">AI will analyze your information and suggest a profitable business problem.</p>
+
+        <button id="generateBtn" class="btn btn-primary">Generate Problem</button>
+
+        <!-- Loading Animation -->
+        <div id="loading" class="loading-spinner" style="display: none;"></div>
+
+        <!-- AI Generated Output -->
+        <div id="problemOutput" class="output-box" style="display: none;">
+            <h3>Identified Business Problem</h3>
+            <p id="problemText">AI-generated problem will appear here...</p>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button id="regenerateBtn" class="btn btn-secondary">Regenerate</button>
+                <button id="copyBtn" class="btn btn-success">Copy</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Understand the problem -->
+
+<section id="understand" class="understand-section">
+    <div class="container">
+        <h2 class="section-title">Understand Your Business Problem</h2>
+        <p class="section-subtitle">Enter a problem to get AI-driven insights and analysis.</p>
+
+        <textarea id="problemInput" placeholder="Type your problem here..." rows="3"></textarea>
+        <button id="explainBtn" class="btn btn-primary">See Explanation</button>
+
+        <!-- Loading Animation -->
+        <div id="loadingExplain" class="loading-spinner" style="display: none;"></div>
+
+        <!-- AI Generated Output -->
+        <div id="explanationOutput" class="output-box" style="display: none;">
+            <h3>Problem Analysis</h3>
+            <p id="explanationText">AI-generated explanation will appear here...</p>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button id="reExplainBtn" class="btn btn-secondary">Regenerate</button>
+                <button id="copyExplainBtn" class="btn btn-success">Copy</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AI generated solution -->
+
+<section id="solve" class="solve-section">
+    <div class="container">
+        <h2 class="section-title">Find the Best Solution</h2>
+        <p class="section-subtitle">Enter a business problem, and AI will generate a logical solution.</p>
+
+        <textarea id="solutionInput" placeholder="Enter your problem..." rows="3"></textarea>
+        <button id="solveBtn" class="btn btn-primary">See Solution</button>
+
+        <!-- Loading Animation -->
+        <div id="loadingSolve" class="loading-spinner" style="display: none;"></div>
+
+        <!-- AI Generated Solution Output -->
+        <div id="solutionOutput" class="output-box" style="display: none;">
+            <h3>AI-Generated Solution</h3>
+            <p id="solutionText">AI-generated solution will appear here...</p>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button id="reSolveBtn" class="btn btn-secondary">Regenerate</button>
+                <button id="copySolveBtn" class="btn btn-success">Copy</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AI guide -->
+
+<section id="guide" class="guide-section">
+    <div class="container">
+        <h2 class="section-title">Get Your AI-Powered Business Guide</h2>
+        <p class="section-subtitle">Enter your business problem, and AI will create a personalized roadmap.</p>
+
+        <textarea id="guideInput" placeholder="Describe your problem..." rows="3"></textarea>
+        <button id="guideBtn" class="btn btn-primary">See Guide</button>
+
+        <!-- Loading Animation -->
+        <div id="loadingGuide" class="loading-spinner" style="display: none;"></div>
+
+        <!-- AI Generated Guide Output -->
+        <div id="guideOutput" class="output-box" style="display: none;">
+            <h3>AI-Generated Business Roadmap</h3>
+            <p id="guideText">AI-generated guide will appear here...</p>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button id="reGuideBtn" class="btn btn-secondary">Regenerate</button>
+                <button id="copyGuideBtn" class="btn btn-success">Copy</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p class="footer-text">© 2025 AI Business Idea Generator | All Rights Reserved</p>
+        
+        <!-- <!—Social Media Links  -->
+        <div class="social-icons">
+            <a href=https://www.linkedin.com/in/sajal-biswas-5916052b6 target="_blank" class="social-link">
+                <I class="fab fa-facebook-f"></i>
+            </a>
+            <a href=https://www.facebook.com/share/1AEzyuLFrD/  target="_blank" class="social-link">
+                <I class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+<script src="script.js"></script>
+</html>
